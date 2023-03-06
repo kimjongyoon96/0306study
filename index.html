@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+body{
+  background-color: rgba(136, 255, 0, 0.61);
+}
+</style>
+<body>
+  <section id="second">
+
+</section>
+
+<script>
+const second=document.getElementById('second');
+
+function boxstyle(d,w,h,r){
+
+  d.style.width=w;
+  d.style.height=h;
+  d.style.border=r;
+
+};
+
+function makeDiv (tagName,parent) {
+
+  let make=document.createElement(tagName);
+  parent.appendChild(make);
+};
+
+
+boxstyle(second,"90vw","90vh","blue","5px solid black");
+
+makeDiv("div",second);
+makeDiv("div",second);
+makeDiv("div",second);
+
+boxstyle(second.children[0],"90vw","25vh","4px solid green");
+boxstyle(second.children[1],"90vw","35vh","1px ");
+boxstyle(second.children[2],"90vw","25vh","4px solid green");
+
+
+second.children[0].style.display="flex";
+second.children[0].style.alignItems="center";
+second.children[0].innerHTML="안녕하세요 김종윤입니다.저의 나이는 28살입니다. "
+second.children[0].style.textDecoration="underline";
+second.children[0].style.fontSize="26px";
+second.children[0].style.display="flex";
+second.children[0].style.borderRadius="200px";
+second.children[0].style.textalign="center";
+
+
+second.children[1].style.display="flex";
+second.children[1].style.alignItems="center";
+second.children[1].style.flexDirection="column";
+second.children[1].style.borderRadius="200px";
+second.children[1].style.border="0px";
+
+
+second.children[2].style.display="flex";
+second.children[2].style.alignItems="center";
+second.children[2].style.borderRadius="200px";
+
+
+let baby1=document.createElement("div");
+second.children[2].appendChild(baby1);
+baby1.style.display="flex";
+baby1.innerHTML="부족하지만 열심히 잘 하겠습니다. 감사합니다.";
+baby1.style.border="1px solid black";
+baby1.style.alignItems="center";
+baby1.style.textDecoration="underline";
+baby1.style.fontSize="26px";
+baby1.style.border="0px";
+
+
+for(let i=0; i<=5; i++){
+let baby2=document.createElement("div");
+baby2.style.alignItems="center";
+baby2.style.width="100%";
+baby2.style.height="35vh";
+baby2.style.display="flex";
+baby2.style.background="aquamarine";
+baby2.style.fontSize="26px";
+baby2.style.borderRadius="200px";
+
+second.children[1].appendChild(baby2);
+}
+second.children[1].children[0].innerHTML="반갑습니다."
+second.children[1].children[1].innerHTML="저는 마라탕을 좋아합니다."
+second.children[1].children[2].innerHTML="저는 근비대에 관심이 많아요"
+second.children[1].children[3].innerHTML="저는 귀여운게 너무 좋아요"
+second.children[1].children[4].innerHTML="저는 강아지와 고양이를 좋아해요"
+second.children[1].children[5].innerHTML="저는 캐릭터티를 좋아해요"
+
+</script>
+ 
+</body>
+</html>
